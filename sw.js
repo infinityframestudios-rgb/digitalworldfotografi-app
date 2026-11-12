@@ -1,4 +1,4 @@
-const C='dw-fotografi-v42',P='dw-fotografi-';
+const C='dw-fotografi-v45',P='dw-fotografi-';
 self.addEventListener('install',e=>self.skipWaiting());
 // cancella solo le PROPRIE cache vecchie (mai quelle di altre app sullo stesso dominio)
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x.startsWith(P)&&x!==C).map(x=>caches.delete(x)))).then(()=>self.clients.claim())));
